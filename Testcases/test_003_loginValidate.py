@@ -1,5 +1,5 @@
 from Base.InitiateDriver import startBrowser,closeBrowser
-def test_validateRegistration():
+def test_validateLogin():
     driver = startBrowser()
     driver.find_element('xpath',"//input[@aria-label='Email or phone number']").send_keys('9987689981')
     driver.find_element('xpath',"//input[@aria-label='Password']").send_keys('Ram@12345')
