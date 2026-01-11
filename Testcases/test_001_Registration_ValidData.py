@@ -1,15 +1,17 @@
 from Base.InitiateDriver import startBrowser,closeBrowser
 from Library.configReader import ElementsRead
 from Pages.RegistrationPage import RegistrationData
+from DataGenerator.DataGen import dataGenerator
 import pytest
 
-def dataGenerator():
-    listData = [
-                ['Ram','Sharma','Feb','28','2002','9898989898','Ram@1234','Male'],
-                ['Shyam','Giri','Dec','03','2004','9876000000','Shyam@123','Male'],
-                ['Sita','Pandey','Jan','06','2003','9800000000','Sita@123','Female']
-                ]
-    return listData
+
+# def dataGenerator():
+#     listData = [
+#                 ['Ram','Sharma','Feb','28','2002','9898989898','Ram@1234','Male'],
+#                 ['Shyam','Giri','Dec','03','2004','9876000000','Shyam@123','Male'],
+#                 ['Sita','Pandey','Jan','06','2003','9800000000','Sita@123','Female']
+#                 ]
+#     return listData
 
 @pytest.mark.parametrize('data',dataGenerator())
 def test_validateRegistration(data):
